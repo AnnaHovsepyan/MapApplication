@@ -65,24 +65,7 @@ public class MainActivity extends BaseGoogleMapsActivity {
         }
     }
 
-    private class RenderClusterInfoWindow extends DefaultClusterRenderer<Person> {
-
-        RenderClusterInfoWindow(Context context, GoogleMap map, ClusterManager<Person> clusterManager) {
-            super(context, map, clusterManager);
-        }
-
-        @Override
-        protected void onClusterRendered(Cluster<Person> cluster, Marker marker) {
-            super.onClusterRendered(cluster, marker);
-        }
-
-        @Override
-        protected void onBeforeClusterItemRendered(Person item, MarkerOptions markerOptions) {
-            markerOptions.title(item.getName());
-
-            super.onBeforeClusterItemRendered(item, markerOptions);
-        }
-    }
+  
 }
 
 
